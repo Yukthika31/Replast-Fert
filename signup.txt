@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body{
+            background: linear-gradient(to bottom, white, whitesmoke);
+        }
+        #form{
+            background: linear-gradient(to bottom, blue, lightblue);
+            margin: 5% 30% 5% 30%;
+            padding: 10px;
+        }
+        #name1,#name2,#num,#select,#password{
+            padding: 10px;
+            margin-top: 20px;
+            width: 90%;
+        }
+        nav{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #submit{
+            border: 1px solid gray;
+            border-radius: 4px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <nav>
+            <h2><a href="loginPg.html" style="text-decoration: none; color: black;">Sign in</a></h2>
+            <h2><a href="signUpPg.html" style="text-decoration: none; color: black;">Sign up</a></h2>
+        </nav>
+        
+        Name : <input id="name1" name="fname" type="text" placeholder="First name" required> <br><br>
+        Email : <input id="name2" name="lname" type="email" placeholder="email ex:abc@gmail.com" required> <br><br>
+        Number : <input id="num" name="number" type="number" placeholder="Number" required> <br><br>
+        
+        
+        Login as : 
+        <select id="select" name="select" style="margin-top: 20px; padding: 10px; width: 82%;"> 
+            <option value="">select</option> 
+            <option value="user"> organizasor</option>
+            <option value="administrater"> Plastic identifier </option>
+            <option value="administrater"> Fertilizer consumer</option>
+        </select> <br><br>
+        Password : <input id="password" type="password" placeholder="Password" required> <br><br>
+        <input id="check" name="check" type="checkbox" checked> Remember me <br><br>
+        <center><input id="submit" name="submit" type="submit" value="Submit"></center>
+    </form>
+</body>
+</html>

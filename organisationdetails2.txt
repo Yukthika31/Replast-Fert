@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        #details-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="tel"], input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="details-container">
+        <form id="details-form" action="org_details_store.php" method="post" autocomplete="off">
+            <div id="details-section">
+                <h1>Enter Your Organization Details</h1>
+                <h1 id="welcome-message"></h1>
+                <input type="text" id="org-name-input" name="org_name" placeholder="Organization Name" required><br>
+                <input type="text" id="id-proof" name="id_proof" placeholder="ID Proof" required><br>
+                <input type="tel" id="phone-number" name="phone" placeholder="Phone Number" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <input type="text" id="instagram" name="instagram" placeholder="Instagram" required><br>
+                <input type="text" id="facebook" name="facebook" placeholder="Facebook" required><br>
+                <button type="submit" name="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="org.js"></script>
+</body>
+</html>

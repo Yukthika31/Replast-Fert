@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        @keyframes home{
+            0%{box-shadow: 2px 2px 2px rgb(89, 168, 199);}
+            25%{box-shadow: -2px 2px 2px rgb(89, 168, 199);}
+            50%{box-shadow: -2px -2px 2px rgb(89, 168, 199);}
+            75%{box-shadow: 2px -2px 2px rgb(89, 168, 199);}
+            100%{box-shadow: 2px 2px 2px rgb(89, 168, 199);}
+        }
+        
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 30px;
+            font-size: 18.4px;
+        }
+        .text-con{
+            display: grid;
+            margin-top: 30px;
+            grid-template-columns: 75% 25%;
+        }
+        #topic{
+            
+            top: 40%;
+            bottom: 40%;
+            background: linear-gradient(to bottom, #2222c4 0%, #66ffff 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        .navbar{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav1,.nav2{
+            display: inline;
+            justify-content: space-evenly;
+        }
+        #home,#pro,#info{
+            text-decoration: none;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 1px 1px 1px rgb(166, 31, 31);
+            border-radius: 5px;
+            font-size: larger;
+        }
+        #login,#signup{
+            
+            text-decoration: none;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 1px 1px 1px rgb(166, 31, 31);
+            border-radius: 5px;
+            font-size: larger;
+        }
+        #disp{
+            margin-top: 20px;
+            margin-left: 10px;
+            
+            box-sizing: border-box;
+            box-shadow: 2px 2px 2px rgb(1, 9, 94);
+        }
+        #side{
+            margin-top: 20px;
+            margin-left: 10px;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 2px rgb(1, 9, 94);
+
+        }
+        #home:hover,#pro:hover,#info:hover,#login:hover,#signup:hover{
+            animation-name: home;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            padding: 21px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1 id="topic"><b>REPLAST <br> FERTILIZER</b></h1>
+    
+    <div class="navbar">
+     <nav class="nav1">
+        <a id="home" href="recycle.html">Home</a>
+        <a id="pro" href="aboutUS.html">About</a>
+        <a id="info" href="inform.html">Services</a>
+     </nav>
+     <nav class="nav2">
+        <a id="login" href="loginPg.html">Login</a>
+        <a id="signup" href="signUpPg.html">Sign up</a>
+     </nav>
+    </div>
+    </header>
+    <div class="text-con">
+        <div id="disp">
+            <img src="https://blog.scienceborealis.ca/wp-content/uploads/sites/2/2022/08/Banner-image.jpg" alt="img1" width="100%" height="28%">
+            <b>Idionella sakaiensis</b> is a bacterium known for its ability to degrade and metabolize polyethylene terephthalate (PET), a common
+             plastic used in bottles and other packaging materials. Discovered in 2016 by a team of Japanese researchers, this bacterium 
+             produces two enzymes, PETase and MHETase, that work together to break down PET into its basic building blocks, which can then
+              be reused to produce new PET.The discovery of Idionella sakaiensis has significant implications for plastic waste management 
+              and recycling efforts, as it offers a potential biological solution to reducing plastic pollution. Researchers are studying 
+              this bacterium and its enzymes to enhance their efficiency and potentially apply them in large-scale plastic recycling 
+              processes.
+              <br><br>When Idionella sakaiensis breaks down polyethylene terephthalate (PET), the process involves two key enzymes: PETase
+               and MHETase.PETase: This enzyme breaks down PET into mono(2-hydroxyethyl) terephthalic acid (MHET) and some terephthalic acid
+                (TPA) and ethylene glycol (EG).MHETase: This enzyme further breaks down MHET into terephthalic acid (TPA) and ethylene glycol 
+                (EG).So, the end by-products of this process are:Terephthalic acid (TPA): A key raw material for producing PET and other 
+                polymers.Ethylene glycol (EG): A component used in the production of PET and antifreeze solutions.
+                <b>Intermediates from 
+            Terephthalic Acid (TPA):</b><br><b>Cyclohexane-1,4-dicarboxylic acid (CHDA):</b>Produced via hydrogenation of TPA.Used in the production 
+            of various polyesters and polyamides.<br><b>Cyclohexane-1,4-dimethanol (CHDM):</b>Further reduction of CHDA.Used in the production of 
+            polyesters and other polymers.<br> <b>p-Xylene:</b>Produced through decarboxylation of TPA.Can be further processed into terephthalic
+             acid again or used in other chemical syntheses.<br><b>Dimethyl terephthalate (DMT):</b>Produced via esterification of TPA with 
+             methanol.Used in polyester production.<br><b>Mono(2-hydroxyethyl) terephthalate (MHET):</b>An intermediate in the enzymatic 
+             breakdown of PET by Idionella sakaiensis.Can be further hydrolyzed to TPA and ethylene glycol.<br><b>Terephthalylidene 
+             bis(aminomethyl)phosphonic acid:</b>Produced through the reaction of TPA with suitable amines and phosphorous compounds.
+             Potential intermediate for specific agricultural applications. <br><br>
+             <b>Intermediates from Ethylene Glycol (EG):</b> <br><b>Glycolic acid:</b>Produced via oxidation of EG.Used in the formulation of fertilizers 
+             and other chemicals. <br><b>Oxalic acid:</b>Produced via oxidation of EG.Used in cleaning and bleaching agents, and can be further 
+             processed for agricultural use. <br><b>Ethylene oxide:</b>Produced via partial oxidation or dehydration of EG.A key intermediate for 
+             the production of surfactants, antifreeze, and other chemicals.<br><b>Ethylene carbonate:</b>Produced via reaction of EG with carbon 
+             dioxide.Used as a solvent and in the production of polycarbonates. <br><b>1,2-Ethanediol monoacetate:</b>Produced by esterification of 
+             EG with acetic acid.Used in chemical syntheses and as a solvent. <br><b>Ethylene glycol monoethyl ether:</b>Produced via 
+             etherification of EG with ethanol.Used as a solvent and in the manufacture of other chemicals.Production of 
+             <br><b>Fertilizers:</b> <br><b>Ammonium terephthalate:</b>Produced via reaction of TPA with ammonia.Can be used directly as a nitrogen fertilizer 
+             or further processed. <br><b>Ammonium glycolate:</b>Produced via reaction of glycolic acid with ammonia.Used as a nitrogen fertilizer.
+             <br><b>Production of Pesticides:</b>Terephthalic acid derivatives:Various derivatives of TPA can be synthesized to act as active 
+             ingredients in pesticides.Examples include terephthalic acid-based esters and amides. <br><b>Ethylene glycol derivatives:</b>EG can be 
+             converted into ethylene glycol-based esters, ethers, and acetals that can serve as solvents or active ingredients in 
+             pesticide formulations. <br>
+             <b>Plant Growth Regulators (PGRs):</b> <br><b>Ethylene Glycol Derivatives:</b><br><b>Ethylene Oxide:Intermediate:</b> Ethylene glycol.Use: 
+             Ethylene oxide can be further reacted to produce ethylene, a plant hormone that regulates fruit ripening and other 
+             growth processes. <br><b>Ethylene Glycol Bis(carbamide) (EGBC):</b><br><b>Intermediate: </b>Ethylene glycol.Synthesis: EG can react with 
+             urea to form EGBC.Use: EGBC can be used to promote plant growth by releasing ethylene slowly. <br><b>Terephthalic Acid 
+             Derivatives:2,6-Dichlorobenzonitrile (DCBN):Intermediate: Terephthalic acid can be converted to benzene 
+             derivatives. <br>Synthesis:</b>TPA is decarboxylated and further chlorinated.Use: DCBN is used as a herbicide and as a 
+             precursor for PGRs. <br><b>Terephthalic Acid-based Esters:</b>Intermediate: Terephthalic acid.Synthesis: Esterification with 
+             alcohols.Use: Certain esters can act as growth stimulants or retardants, depending on the formulation.Fertilizers 
+             and Soil Conditioners: <br><b>Glycolic Acid Derivatives: <br>Glycolic Acid-based Fertilizers:</b>Intermediate: Glycolic acid from ethylene glycol.
+             Synthesis: Oxidation of ethylene glycol to glycolic acid.Use: Glycolic acid can be used as a soil conditioner to 
+             improve nutrient uptake.
+        </div>
+        <div id="side">
+            <img src="https://media.istockphoto.com/id/1442904386/photo/devestating-shot-of-plastic-waste-in-the-ocean-water-pollution.jpg?s=612x612&w=0&k=20&c=g3IioLf8XdzYsadrumaLZP8H2YkTqXVA4Mj2KCktrtQ=" alt="img2" width="100%" height="20%">
+            <img src="https://mediaproxy.salon.com/width/1200/https://media2.salon.com/2022/04/plastic-degrading-eating-bacteria-0429221.jpg" alt="img3" width="100%" height="20%">
+            <img src="https://assets.ey.com/content/dam/ey-sites/ey-com/en_in/topics/manufacturing/2023/ey-chemical-molecules.jpg" alt="img4" width="100%" height="20%">
+            <img src="https://www.theindustryoutlook.com/uploaded_images/newstransfer/8u8rvorganic%20fertilizer.jpg" alt="img5" width="100%" height="20%">
+            <img src="https://www.treehugger.com/thmb/rD7bx8e5t0RbgyJWbHGm3wZslpg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1184603603-f21902e1e7384efe8e639ed66b70d6f3.jpg" alt="img5" width="100%" height="15%">
+        </div>
+      </div>
+        
+</body>
+</html>

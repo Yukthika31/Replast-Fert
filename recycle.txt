@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recycling</title>
+    <style>
+        @keyframes home{
+            0%{box-shadow: 2px 2px 2px rgb(89, 168, 199);}
+            25%{box-shadow: -2px 2px 2px rgb(89, 168, 199);}
+            50%{box-shadow: -2px -2px 2px rgb(89, 168, 199);}
+            75%{box-shadow: 2px -2px 2px rgb(89, 168, 199);}
+            100%{box-shadow: 2px 2px 2px rgb(89, 168, 199);}
+        }
+        
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 30px;
+            font-size: 18.4px;
+        }
+        #topic{
+            
+            top: 40%;
+            bottom: 40%;
+            background: linear-gradient(to bottom, #2222c4 0%, #66ffff 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav1,.nav2
+        {
+            display: inline;
+            justify-content: space-evenly;
+        }
+        #home,#pro,#info{
+            text-decoration: none;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 1px 1px 1px rgb(166, 31, 31);
+            border-radius: 5px;
+            font-size: larger;
+        }
+        #login,#signup{
+            
+            text-decoration: none;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 1px 1px 1px rgb(166, 31, 31);
+            border-radius: 5px;
+            font-size: larger;
+        }
+        
+        #home:hover,#pro:hover,#info:hover,#login:hover,#signup:hover{
+            animation-name: home;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            padding: 21px;
+            
+        }
+        
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1 id="topic"><b>REPLAST <br> FERTILIZER</b></h1>
+    
+    <div class="navbar">
+     <nav class="nav1">
+        <a id="home" href="recycle.html">Home</a>
+        <a id="pro" href="aboutUS.html">About</a>
+        <a id="info" href="inform.html">Services</a>
+     </nav>
+     <nav class="nav2">
+        <a id="login" href="loginPg.html">Login</a>
+        <a id="signup" href="signUpPg.html">Sign up</a>
+     </nav>
+    </div>
+    </header>
+    <h2>
+        <br>
+        Turning Plastic Waste into Green Solutions
+        <br>
+    </h2>  
+    <p>
+        Replast Fert is at the forefront of sustainability, dedicated to turning PET (Polyethylene Terephthalate) plastic waste into valuable resources. Our innovative processes recycle PET plastic and convert it into premium fertilizers that enhance soil health and support sustainable farming practices. We are committed to reducing plastic waste, promoting eco-friendly solutions, and fostering a circular economy.
+        Contribute to reducing plastic waste and minimizing environmental harm. Support sustainable agriculture with our eco-friendly fertilizers.
+        Benefit from our advanced recycling and conversion technologies.
+    <br>
+    </p>
+    <h2>Contact us</h2> 
+    <a href="email">replastfert@gmail.com</a><br>
+    <a href="insta">Insta</a><br>
+    <a href="face">Facebook</a><br> <br><br><br><br>
+    <footer style="text-align: center; background-color: rgb(106, 104, 104);">
+        <br>
+        © 2024 Replast Fert. All rights reserved.
+        <br><br>
+    </footer>
+</body>
+</html>

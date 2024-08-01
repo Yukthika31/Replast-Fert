@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recycling</title>
+    <style>
+        @keyframes home{
+            0%{box-shadow: 2px 2px 2px rgb(89, 168, 199);}
+            25%{box-shadow: -2px 2px 2px rgb(89, 168, 199);}
+            50%{box-shadow: -2px -2px 2px rgb(89, 168, 199);}
+            75%{box-shadow: 2px -2px 2px rgb(89, 168, 199);}
+            100%{box-shadow: 2px 2px 2px rgb(89, 168, 199);}
+        }
+        
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 30px;
+            font-size: 18.4px;
+        }
+        #topic{
+            
+            top: 40%;
+            bottom: 40%;
+            background: linear-gradient(to bottom, #2222c4 0%, #66ffff 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav1,.nav2
+        {
+            display: inline;
+            justify-content: space-evenly;
+        }
+        #home,#pro,#info{
+            text-decoration: none;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 1px 1px 1px rgb(166, 31, 31);
+            border-radius: 5px;
+            font-size: larger;
+        }
+        #login,#signup{
+            
+            text-decoration: none;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 1px 1px 1px rgb(166, 31, 31);
+            border-radius: 5px;
+            font-size: larger;
+        }
+        
+        #home:hover,#pro:hover,#info:hover,#login:hover,#signup:hover{
+            animation-name: home;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            padding: 21px;
+            
+        }
+        .image-con{
+            margin-top: 30px;
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+        }
+        img{
+            gap: 1px;
+            border: 2px solid gray;
+            border-radius: 5px;
+            height:50vh;
+            width: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: all ease-in-out 0.7s;
+            
+        }
+        #img1,#img2,#img3,#img4,#img5{
+           display: grid;
+           grid-template-columns: 2fr 2fr;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+    <h1 id="topic"><b>REPLAST <br> FERTILIZER</b></h1>
+    
+    <div class="navbar">
+     <nav class="nav1">
+        <a id="home" href="recycle.html">Home</a>
+        <a id="pro" href="aboutUS.html">About</a>
+        <a id="info" href="inform.html">Services</a>
+     </nav>
+     <nav class="nav2">
+        <a id="login" href="loginPg.html">Login</a>
+        <a id="signup" href="signUpPg.html">Sign up</a>
+     </nav>
+    </div>
+    </header>
+    <div class="image-con">
+        <div id="img1">
+            <div id="fig">
+            <figure>
+            <img src="https://keralakaumudi.com/web-news/en/2021/01/NMAN0210575/image/plastic.1.458439.jpg" width="100%" height="400px" alt="img1">
+            <figcaption>Plastic (PET) collection</figcaption>
+            </figure>
+            </div>
+            <div id="para">
+                <p>
+                    PET (Polyethylene Terephthalate) plastic is widely used in everyday products, from water bottles to food containers.By tracking the quantity and location of PET plastic disposal, we can ensure proper recycling processes are followed and contribute to a more sustainable environment. Proper disposal and recycling of PET plastic are crucial to reduce environmental impact and promote sustainability.
+                    Enter information about PET plastic, including the quantity and location of disposal. <br><br> <a href="loginPg.html" style="text-decoration: none;">click here</a>
+            </p>
+            </div>
+        </div>
+        <div id="img2">
+            <div id="fig">
+            <figure>
+                <img src="https://navata.com/cms/wp-content/uploads/2021/05/transportation-modes-for-shifting-households.jpg" width="300px" height="400px"  alt="img1">
+                <figcaption>Transportation</figcaption>
+            </figure></div>
+            <div id="para">
+                <p>
+                    Government prooved organisation can export the plastics from the sources which details are available on our website . click hereto log in and see the plastic and enable to see the details of the webpage.Organizations that are approved by the government can export PET plastic for recycling.
+                    Exporting helps manage large quantities of plastic waste efficiently and ensures it is processed in facilities that meet environmental standards.Visit our website to log in and see detailed information about the sources and quantities of PET plastic available for export.
+                    Approved organizations can access detailed data and manage the export process effectively.
+                    <br> <br> <a href="loginPg.html" style="text-decoration: none;"> click here</a>
+            </p>
+            </div>
+        </div>
+        <div id="img3">
+            <div id="fig">
+            <figure>
+                <img src="https://www.ecowatch.com/wp-content/uploads/2021/11/396186819-origin.jpg" width="300px" height="400px" alt="img1">
+                <figcaption>Conversion</figcaption>
+            </figure>
+            </div>
+            <div id="para">
+                <p>
+                    Innovative methods are being developed to convert PET plastic into useful products such as fertilizers. This process involves breaking down PET plastic and using its components to enhance soil fertility.Combine the broken-down components with other materials to create fertilizer.
+                    <br><br>
+                    <a href="loginPg.html" style="text-decoration: none;"> click here</a>
+            </p>
+            </div>
+        </div>
+        <div id="img4">
+            <div id="fig">
+            <figure>
+                <img src="https://lh3.googleusercontent.com/bUzS1UzdWIe922ik79-jryo4fidQe7ze2aUSuRvBt7J5m2a-qQCTZMLXM_8x97nmQkkKNCnSCoqszQu21MWHF2Sv0RnUK1_DTyd5cTJw_w=s1000" width="300px" height="400px" alt="img1">
+                <figcaption>Exportion of Fertilizers</figcaption>
+            </figure>
+            </div>
+            <div id="para">
+                <p>
+                    Interested buyers can register on our platform to gain access to fertilizers derived from PET plastic.
+Registration includes providing necessary details such as business name, contact information, and intended use of the fertilizers.Detailed listings of available fertilizers, including their composition, benefits, and quantities, are provided.
+Buyers can browse through these listings to find the fertilizers that meet their needs.Visit our website to log in and see detailed information about the fertilizers available for purchase.
+Registered buyers can access detailed data, including product specifications and pricing.
+              <br><br>
+              <a href="loginPg.html" style="text-decoration: none;">click here</a>
+            </p>
+            </div>
+        </div>
+        
+        </div>
+    </div>    
+</body>
+</html>
