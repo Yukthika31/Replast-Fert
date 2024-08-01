@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Organiser Records</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        #records-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: green;
+        }
+
+        button{
+            text-decoration: none;
+            border-radius: 3px;
+            padding: 5px ;
+            margin-bottom: 5px;
+            color: pink;
+            
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        #footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #footer a img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="records-container">
+        <h1>Organiser Records</h1>
+        <table id="records-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Organisation Name</th>
+                    <th>ID Proof</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Instagram</th>
+                    <th>Facebook</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Records will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <div id="footer">
+            <button><a href="informer_details.html" >Plastic Identifiers Details</a></button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('fetch_records.php')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.error) {
+                        console.error('Error:', data.error);
+                        document.getElementById('records-container').innerHTML = `<p>${data.error}</p>`;
+                        return;
+                    }
+
+                    const tableBody = document.getElementById('records-table').getElementsByTagName('tbody')[0];
+                    tableBody.innerHTML = '';
+
+                    data.records.forEach(record => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${record.Name}</td>
+                            <td>${record.Organisation_Name}</td>
+                            <td>${record.ID_Proof}</td>
+                            <td>${record.Phone_Number}</td>
+                            <td>${record.E_mail}</td>
+                            <td><a href="${record.Instagram_ID ? `https://www.instagram.com/${record.Instagram_ID}` : '#'}" target="_blank">${record.Instagram_ID || 'N/A'}</a></td>
+                            <td><a href="${record.Facebook_ID ? `https://www.facebook.com/${record.Facebook_ID}` : '#'}" target="_blank">${record.Facebook_ID || 'N/A'}</a></td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                    document.getElementById('records-container').innerHTML = `<p>Error fetching records: ${error.message}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>
+

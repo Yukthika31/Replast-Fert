@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Identifiers</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #56ccf2, #2f80ed);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        #container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="tel"], input[type="number"], input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        form input[type="text"], form input[type="tel"], form input[type="number"], form input[type="file"] {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form input[type="text"]:hover, form input[type="tel"]:hover, form input[type="number"]:hover, form input[type="file"]:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        #thank-you-msg {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="details-section">
+            <h1>Plastic Identifiers</h1>
+            <form id="details-form">
+                <input type="text" id="name" placeholder="Name" required><br>
+                <input type="tel" id="phone" placeholder="Phone Number" required><br>
+                <input type="text" id="city" placeholder="City" required><br>
+                <input type="text" id="district" placeholder="District" required><br>
+                <input type="text" id="state" placeholder="State" required><br>
+                <input type="number" id="pincode" placeholder="Pincode" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="thank-you-msg">
+            <h1>Thank You!</h1>
+            <p>Please provide the following details:</p>
+            <form id="plastic-info-form">
+                <input type="file" id="photo" required><br>
+                <input type="text" id="place-name" placeholder="Place Name" required><br>
+                <input type="number" id="amount" placeholder="Amount of PET Plastics" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('details-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('details-section').style.display = 'none';
+            document.getElementById('thank-you-msg').style.display = 'block';
+        });
+
+        document.getElementById('plastic-info-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your submission! We will process the information.');
+            document.getElementById('plastic-info-form').reset();
+        });
+    </script>
+</body>
+</html>
