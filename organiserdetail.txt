@@ -1,0 +1,41 @@
+function afterClick(){
+    document.getElementById('org-name-submit').addEventListener('click', function() {
+        var orgName = document.getElementById('org-name-input').value;
+        if (orgName) {
+            document.getElementById('welcome-message').innerText = 'Welcome, ' + orgName + '!';
+            document.getElementById('org-name-section').style.display = 'none';
+            document.getElementById('details-section').style.display = 'block';
+        } else {
+            alert('Please enter your organization name.');
+        }
+    });
+}
+
+var orgName ;
+var idProof ;
+var phoneNumber ;
+var email ;
+var instagram ;
+var facebook ;
+
+document.getElementById('org-details-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    orgName = document.getElementById('org-name-input').value;
+    idProof = document.getElementById('details-id-proof').value;
+    phoneNumber = document.getElementById('phone-number').value;
+    email = document.getElementById('email').value;
+    instagram = document.getElementById('instagram').value;
+    facebook = document.getElementById('facebook').value;
+});
+
+function display(){
+    document.getElementById('profile-org-name').innerText = 'Organization Name: ' + orgName;
+    document.getElementById('profile-id-proof').innerText = 'ID Proof: ' + idProof;
+    document.getElementById('profile-phone-number').innerText = 'Phone Number: ' + phoneNumber;
+    document.getElementById('profile-email').innerText = 'Email: ' + email;
+    document.getElementById('profile-instagram').href = 'https://instagram.com/' + instagram;
+    document.getElementById('profile-facebook').href = 'https://facebook.com/' + facebook;
+
+    document.getElementById('login-container').style.display = 'none';
+    document.getElementById('profile-container').style.display = 'block';
+}

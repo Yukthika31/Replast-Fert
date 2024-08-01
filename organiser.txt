@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        #login-container, #profile-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="tel"], input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        form input[type="text"], form input[type="tel"], form input[type="email"] {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form input[type="text"]:hover, form input[type="tel"]:hover, form input[type="email"]:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        #footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #footer a img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <div id="org-name-section">
+            <h1>Enter Your Organization Name</h1>
+            <input type="text" id="org-name-input" placeholder="Organization Name">
+            <button id="org-name-submit">Submit</button>
+        </div>
+        
+        <div id="details-section" style="display: none;">
+            <h1 id="welcome-message"></h1>
+            <form id="org-details-form">
+                <input type="text" id="id-proof" placeholder="ID Proof" required><br>
+                <input type="tel" id="phone-number" placeholder="Phone Number" required><br>
+                <input type="email" id="email" placeholder="Email" required><br>
+                <input type="text" id="instagram" placeholder="Instagram" required><br>
+                <input type="text" id="facebook" placeholder="Facebook" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="profile-container" style="display: none;">
+        <h1>Profile Details</h1>
+        <p id="profile-org-name"></p>
+        <p id="profile-id-proof"></p>
+        <p id="profile-phone-number"></p>
+        <p id="profile-email"></p>
+        <div id="footer">
+            <a id="profile-instagram" href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+            <a id="profile-facebook" href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('org-name-submit').addEventListener('click', function() {
+            var orgName = document.getElementById('org-name-input').value;
+            if (orgName) {
+                document.getElementById('welcome-message').innerText = 'Welcome, ' + orgName + '!';
+                document.getElementById('org-name-section').style.display = 'none';
+                document.getElementById('details-section').style.display = 'block';
+            } else {
+                alert('Please enter your organization name.');
+            }
+        });
+
+        document.getElementById('org-details-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var orgName = document.getElementById('org-name-input').value;
+            var idProof = document.getElementById('id-proof').value;
+            var phoneNumber = document.getElementById('phone-number').value;
+            var email = document.getElementById('email').value;
+            var instagram = document.getElementById('instagram').value;
+            var facebook = document.getElementById('facebook').value;
+
+            document.getElementById('profile-org-name').innerText = 'Organization Name: ' + orgName;
+            document.getElementById('profile-id-proof').innerText = 'ID Proof: ' + idProof;
+            document.getElementById('profile-phone-number').innerText = 'Phone Number: ' + phoneNumber;
+            document.getElementById('profile-email').innerText = 'Email: ' + email;
+            document.getElementById('profile-instagram').href = 'https://instagram.com/' + instagram;
+            document.getElementById('profile-facebook').href = 'https://facebook.com/' + facebook;
+
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('profile-container').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
