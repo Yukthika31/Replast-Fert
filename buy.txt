@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Marketplace</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #4CAF50;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            max-width: 300px;
+            text-align: center;
+            flex: 1 1 300px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .contact-details {
+            margin: 20px 0;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #4CAF50;
+            margin: 10px 0;
+        }
+
+        .order-button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .order-button:hover {
+            background: #45a049;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Fertilizer Marketplace
+    </header>
+    <div class="container">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Organic+Fertilizer" alt="Organic Fertilizer">
+            <div class="card-body">
+                <h3 class="card-title">Organic Fertilizer</h3>
+                <p class="card-text">This organic fertilizer is derived from PET plastics and bacteria. It helps improve soil health and boost crop yields. Ideal for fruits, vegetables, and flowers.</p>
+                <div class="contact-details">
+                    <p><strong>Contact:</strong> John Doe</p>
+                    <p><strong>Phone:</strong> 123-456-7890</p>
+                    <p><strong>Email:</strong> john@example.com</p>
+                </div>
+                <p class="price">$50 per bag</p>
+                <button class="order-button" onclick="orderFertilizer('Organic Fertilizer')">Order Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Inorganic+Fertilizer" alt="Inorganic Fertilizer">
+            <div class="card-body">
+                <h3 class="card-title">Inorganic Fertilizer</h3>
+                <p class="card-text">This inorganic fertilizer is processed from PET plastics and provides essential nutrients to plants for optimal growth. Suitable for all types of crops.</p>
+                <div class="contact-details">
+                    <p><strong>Contact:</strong> Jane Smith</p>
+                    <p><strong>Phone:</strong> 987-654-3210</p>
+                    <p><strong>Email:</strong> jane@example.com</p>
+                </div>
+                <p class="price">$45 per bag</p>
+                <button class="order-button" onclick="orderFertilizer('Inorganic Fertilizer')">Order Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Compost+Fertilizer" alt="Compost Fertilizer">
+            <div class="card-body">
+                <h3 class="card-title">Compost Fertilizer</h3>
+                <p class="card-text">Compost fertilizer made from recycled PET plastics and organic waste. Enhances soil structure and fertility, making it perfect for gardens and lawns.</p>
+                <div class="contact-details">
+                    <p><strong>Contact:</strong> Emily Johnson</p>
+                    <p><strong>Phone:</strong> 555-123-4567</p>
+                    <p><strong>Email:</strong> emily@example.com</p>
+                </div>
+                <p class="price">$40 per bag</p>
+                <button class="order-button" onclick="orderFertilizer('Compost Fertilizer')">Order Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Bio+Fertilizer" alt="Bio Fertilizer">
+            <div class="card-body">
+                <h3 class="card-title">Bio Fertilizer</h3>
+                <p class="card-text">Bio fertilizer derived from PET plastics and beneficial microorganisms. Promotes plant growth by increasing the supply of essential nutrients. Ideal for sustainable farming.</p>
+                <div class="contact-details">
+                    <p><strong>Contact:</strong> Michael Brown</p>
+                    <p><strong>Phone:</strong> 444-567-8901</p>
+                    <p><strong>Email:</strong> michael@example.com</p>
+                </div>
+                <p class="price">$55 per bag</p>
+                <button class="order-button" onclick="orderFertilizer('Bio Fertilizer')">Order Now</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Fertilizer Marketplace. All rights reserved.
+    </footer>
+
+    <script>
+        function orderFertilizer(fertilizerName) {
+            alert('You have ordered: ' + fertilizerName);
+            // Here you can add the functionality to handle the order, e.g., redirect to an order form or process the order.
+        }
+    </script>
+</body>
+</html>
